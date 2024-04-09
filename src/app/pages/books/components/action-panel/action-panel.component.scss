@@ -1,0 +1,12 @@
+:host {
+	display: flex;
+	justify-content: space-between;
+
+	.search {
+		width: 300px;
+	}
+
+	.sort {
+		width: 180px;
+	}
+}

@@ -1,0 +1,19 @@
+:host {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+
+	.assigner-field {
+		align-items: center;
+		display: flex;
+		gap: 10px;
+
+		.mat-mdc-form-field {
+			flex: 1;
+		}
+
+		&-input {
+			margin-top: 10px;
+		}
+	}
+}

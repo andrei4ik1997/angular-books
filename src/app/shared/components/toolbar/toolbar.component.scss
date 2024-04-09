@@ -1,0 +1,31 @@
+@use '@angular/material' as mat;
+
+@use 'theme' as app-theme;
+
+:host {
+	.mat-toolbar-row {
+		display: flex;
+		justify-content: space-between;
+
+		.links {
+			display: flex;
+			gap: 12px;
+
+			&__link {
+				color: white;
+
+				text-decoration: none;
+
+				&:active,
+				&:hover {
+					color: white;
+					text-decoration: none;
+				}
+
+				&.active {
+					color: mat.get-theme-color(app-theme.$angular-app-theme, accent);
+				}
+			}
+		}
+	}
+}

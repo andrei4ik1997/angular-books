@@ -1,0 +1,55 @@
+<div class="title">
+	<span>Фильтр</span>
+	<span>{{ booksCount() }} книг</span>
+</div>
+
+<form class="filters" [formGroup]="booksFilterForm">
+	<div class="filters__filter">
+		<span class="filters__filter-title">Авторы:</span>
+		<mat-form-field class="filters__filter-field">
+			<mat-select multiple formControlName="author" name="status">
+				@for (author of booksAuthors(); track author) {
+					<mat-option [value]="author">{{ author }}</mat-option>
+				} @empty {
+					<no-data size="m" />
+				}
+			</mat-select>
+		</mat-form-field>
+	</div>
+
+	<div class="filters__filter">
+		<span class="filters__filter-title">Язык:</span>
+		<mat-form-field class="filters__filter-field">
+			<mat-select multiple formControlName="language" name="status">
+				@for (language of booksLanguages(); track language) {
+					<mat-option [value]="language">{{ language }}</mat-option>
+				} @empty {
+					<no-data size="m" />
+				}
+			</mat-select>
+		</mat-form-field>
+	</div>
+
+	<div class="filters__filter">
+		<span class="filters__filter-title">Жанр:</span>
+		<mat-form-field class="filters__filter-field">
+			<mat-select multiple formControlName="genre" name="status">
+				@for (genre of bookGenres(); track genre) {
+					<mat-option [value]="genre">{{ genre }}</mat-option>
+				} @empty {
+					<no-data size="m" />
+				}
+			</mat-select>
+		</mat-form-field>
+	</div>
+
+	<div class="filters__filter">
+		<span class="filters__filter-title">Количество страниц:</span>
+		<mat-slider min="0" step="1" discrete formGroupName="pages" [max]="maxPages()">
+			<input matSliderStartThumb formControlName="min" />
+			<input matSliderEndThumb formControlName="max" />
+		</mat-slider>
+	</div>
+
+	<button mat-flat-button color="primary" [disabled]="!booksFilterForm.dirty" (click)="clear()">Clear</button>
+</form>

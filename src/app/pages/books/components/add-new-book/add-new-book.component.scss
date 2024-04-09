@@ -1,0 +1,26 @@
+:host {
+	--mat-dialog-actions-alignment: flex-end;
+
+	.mat-mdc-dialog-content {
+		.form {
+			$gap: 14px;
+
+			display: flex;
+			flex-wrap: wrap;
+			gap: $gap;
+
+			.mat-mdc-form-field {
+				flex-basis: calc(50% - calc($gap / 2));
+
+				&:has(textarea) {
+					flex-basis: 100%;
+				}
+			}
+
+			textarea {
+				height: 80px;
+				resize: none;
+			}
+		}
+	}
+}

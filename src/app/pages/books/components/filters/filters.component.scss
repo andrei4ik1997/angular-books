@@ -1,0 +1,29 @@
+:host {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	gap: 10px;
+
+	.title {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.filters {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		gap: 16px;
+		height: 0;
+
+		&__filter {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+
+			.mat-mdc-slider {
+				--mat-slider-value-indicator-opacity: 0.8;
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+<aside class="filters">
+	<filters
+		[booksAuthors]="booksAuthors()"
+		[booksLanguages]="booksLanguages()"
+		[bookGenres]="bookGenres()"
+		[booksCount]="books()?.length ?? 0"
+		[maxPages]="maxPages()"
+		(filterChanged)="filterChanged.emit($event)"
+	/>
+</aside>
+
+<section class="books-container">
+	<action-panel
+		[authors]="authors()"
+		[genre]="genre()"
+		[languages]="languages()"
+		[disabled]="booksLoadingStatus()?.loading"
+		(addNewBook)="addNewBook.emit($event)"
+		(sortChanged)="sortChanged.emit($event)"
+		(searchChanged)="searchChanged.emit($event)"
+	/>
+
+	<div class="books">
+		@if (booksLoadingStatus()?.loading) {
+			<spinner />
+		} @else {
+			@if (books()?.length) {
+				@for (book of books(); track book.id) {
+					<book class="books__book" [book]="book" (click)="openBook(book)" />
+				} @empty {
+					<no-data />
+				}
+			} @else {
+				<no-data />
+			}
+		}
+	</div>
+</section>

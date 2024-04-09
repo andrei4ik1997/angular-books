@@ -1,0 +1,54 @@
+<h2 mat-dialog-title>Добавление новой книги</h2>
+
+<mat-dialog-content>
+	<form class="form" [formGroup]="bookFormGroup">
+		<mat-form-field>
+			<mat-label>Название</mat-label>
+			<input matInput formControlName="title" />
+		</mat-form-field>
+
+		<mat-form-field>
+			<mat-label>Автор</mat-label>
+			<mat-select formControlName="author" name="author">
+				@for (author of matDialogData.authors; track author) {
+					<mat-option [value]="author">{{ author }}</mat-option>
+				}
+			</mat-select>
+		</mat-form-field>
+
+		<mat-form-field>
+			<mat-label>Язык</mat-label>
+			<input matInput formControlName="language" [matAutocomplete]="languagesMatAutocomplete" />
+			<mat-autocomplete #languagesMatAutocomplete="matAutocomplete">
+				@for (language of filteredLanguages(); track language) {
+					<mat-option [value]="language">{{ language }}</mat-option>
+				}
+			</mat-autocomplete>
+		</mat-form-field>
+		<mat-form-field>
+			<mat-label>Жанр</mat-label>
+			<input matInput formControlName="genre" [matAutocomplete]="genreMatAutocomplete" />
+			<mat-autocomplete #genreMatAutocomplete="matAutocomplete">
+				@for (genre of filteredGenres(); track genre) {
+					<mat-option [value]="genre">{{ genre }}</mat-option>
+				}
+			</mat-autocomplete>
+		</mat-form-field>
+		<mat-form-field>
+			<mat-label>Количество страниц</mat-label>
+			<input matInput formControlName="pages" min="0" type="number" />
+		</mat-form-field>
+
+		<mat-form-field class="example-full-width">
+			<mat-label>Описание</mat-label>
+			<textarea formControlName="description" matInput></textarea>
+		</mat-form-field>
+	</form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+	<button mat-button (click)="close()">Отменить</button>
+	<button mat-button mat-flat-button color="primary" [disabled]="bookFormGroup.invalid" (click)="add()">
+		Добавить
+	</button>
+</mat-dialog-actions>

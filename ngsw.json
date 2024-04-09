@@ -1,0 +1,111 @@
+{
+  "configVersion": 1,
+  "timestamp": 1712701973549,
+  "index": "https://andrei4ik1997.github.io/angular-books/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://andrei4ik1997.github.io/angular-books/chunk-2IZ7IHI6.js",
+        "https://andrei4ik1997.github.io/angular-books/chunk-4ITLS4QF.js",
+        "https://andrei4ik1997.github.io/angular-books/chunk-55KE2TB7.js",
+        "https://andrei4ik1997.github.io/angular-books/chunk-AKPF37JZ.js",
+        "https://andrei4ik1997.github.io/angular-books/chunk-BIVHMMV7.js",
+        "https://andrei4ik1997.github.io/angular-books/chunk-DCBZD2S7.js",
+        "https://andrei4ik1997.github.io/angular-books/chunk-DEZQJN2I.js",
+        "https://andrei4ik1997.github.io/angular-books/chunk-EW2PVRSD.js",
+        "https://andrei4ik1997.github.io/angular-books/chunk-JGYM447R.js",
+        "https://andrei4ik1997.github.io/angular-books/chunk-K2VAXOT5.js",
+        "https://andrei4ik1997.github.io/angular-books/chunk-KOE7Q2QX.js",
+        "https://andrei4ik1997.github.io/angular-books/chunk-M53VWNKG.js",
+        "https://andrei4ik1997.github.io/angular-books/chunk-N5Y427EA.js",
+        "https://andrei4ik1997.github.io/angular-books/chunk-O3JXMO3L.js",
+        "https://andrei4ik1997.github.io/angular-books/chunk-UVSGBOMG.js",
+        "https://andrei4ik1997.github.io/angular-books/chunk-V2LL36NH.js",
+        "https://andrei4ik1997.github.io/angular-books/favicon.ico",
+        "https://andrei4ik1997.github.io/angular-books/index.html",
+        "https://andrei4ik1997.github.io/angular-books/main-METICNJM.js",
+        "https://andrei4ik1997.github.io/angular-books/manifest.webmanifest",
+        "https://andrei4ik1997.github.io/angular-books/polyfills-RT5I6R6G.js",
+        "https://andrei4ik1997.github.io/angular-books/styles-L5R4ED62.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://andrei4ik1997.github.io/angular-books/assets/icons/icon-128x128.png",
+        "https://andrei4ik1997.github.io/angular-books/assets/icons/icon-144x144.png",
+        "https://andrei4ik1997.github.io/angular-books/assets/icons/icon-152x152.png",
+        "https://andrei4ik1997.github.io/angular-books/assets/icons/icon-192x192.png",
+        "https://andrei4ik1997.github.io/angular-books/assets/icons/icon-384x384.png",
+        "https://andrei4ik1997.github.io/angular-books/assets/icons/icon-512x512.png",
+        "https://andrei4ik1997.github.io/angular-books/assets/icons/icon-72x72.png",
+        "https://andrei4ik1997.github.io/angular-books/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://andrei4ik1997.github.io/angular-books/assets/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
+    "https://andrei4ik1997.github.io/angular-books/assets/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
+    "https://andrei4ik1997.github.io/angular-books/assets/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
+    "https://andrei4ik1997.github.io/angular-books/assets/icons/icon-192x192.png": "15c4180454633880d98674aa7394656196c91584",
+    "https://andrei4ik1997.github.io/angular-books/assets/icons/icon-384x384.png": "94a915751ef6c9282df9aea405ad679230631814",
+    "https://andrei4ik1997.github.io/angular-books/assets/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
+    "https://andrei4ik1997.github.io/angular-books/assets/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
+    "https://andrei4ik1997.github.io/angular-books/assets/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
+    "https://andrei4ik1997.github.io/angular-books/chunk-2IZ7IHI6.js": "3bf27a36d675bdb4e095d35e029f4b422f5ef304",
+    "https://andrei4ik1997.github.io/angular-books/chunk-4ITLS4QF.js": "cd137e8c32810fdd6cdfbf9c91db86fbee57c7e8",
+    "https://andrei4ik1997.github.io/angular-books/chunk-55KE2TB7.js": "fd4fc33dfc3c6ef846db1272f907a0dbbbb1e374",
+    "https://andrei4ik1997.github.io/angular-books/chunk-AKPF37JZ.js": "ae6a3d6b9cefd43f0ac232920198da49a45b7393",
+    "https://andrei4ik1997.github.io/angular-books/chunk-BIVHMMV7.js": "cf1042c42e22c9a4a83b60ebf06309e971d09702",
+    "https://andrei4ik1997.github.io/angular-books/chunk-DCBZD2S7.js": "f551a6798e46b718b96ab9ec469b134162f32d3e",
+    "https://andrei4ik1997.github.io/angular-books/chunk-DEZQJN2I.js": "ef3c3dc8acefe8f19558b5a5ea682d47668f1500",
+    "https://andrei4ik1997.github.io/angular-books/chunk-EW2PVRSD.js": "a537fce3ca81d62acc64eadac972d455f49e3181",
+    "https://andrei4ik1997.github.io/angular-books/chunk-JGYM447R.js": "9f8cda118aa87c55f448942feed115821c3d0ac0",
+    "https://andrei4ik1997.github.io/angular-books/chunk-K2VAXOT5.js": "5d83582d4392bb22ac341362ec9c03a6f2b88965",
+    "https://andrei4ik1997.github.io/angular-books/chunk-KOE7Q2QX.js": "d1d56f87b7764410ca17bd8cd2d4530da1a16d78",
+    "https://andrei4ik1997.github.io/angular-books/chunk-M53VWNKG.js": "9b4e5a693fef1aedce32147e396ed9a09bc9d473",
+    "https://andrei4ik1997.github.io/angular-books/chunk-N5Y427EA.js": "1b007ca0ab96cc84c94e12faf8943c135d140e7b",
+    "https://andrei4ik1997.github.io/angular-books/chunk-O3JXMO3L.js": "04690be0185afb86a3a6d822cf5df0e76c13c369",
+    "https://andrei4ik1997.github.io/angular-books/chunk-UVSGBOMG.js": "6e994407362026e94951a7671811080324d7a144",
+    "https://andrei4ik1997.github.io/angular-books/chunk-V2LL36NH.js": "bde7c792c3b21e27491921ef7f47de5a53e5e8d4",
+    "https://andrei4ik1997.github.io/angular-books/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "https://andrei4ik1997.github.io/angular-books/index.html": "77083c0727318ba0d02876650a0335aa4fb5302f",
+    "https://andrei4ik1997.github.io/angular-books/main-METICNJM.js": "0a450e32ea4669998047987d93a7997e017810c8",
+    "https://andrei4ik1997.github.io/angular-books/manifest.webmanifest": "8f1c179847d0da8575b1e433e06027cb6fb73652",
+    "https://andrei4ik1997.github.io/angular-books/polyfills-RT5I6R6G.js": "fe9f024576f21ff6314cf8f8332cde58b9a12416",
+    "https://andrei4ik1997.github.io/angular-books/styles-L5R4ED62.css": "bd31ea2376b919b9bc6a1761e1f6937b9ac8d3b3"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

@@ -1,1 +1,0 @@
-import"./chunk-55KE2TB7.js";var o="bookID";var t=[{path:"",loadComponent:()=>import("./chunk-V2LL36NH.js"),children:[{path:`:${o}`,loadComponent:()=>import("./chunk-K2VAXOT5.js")}]}],n=t;export{n as default};

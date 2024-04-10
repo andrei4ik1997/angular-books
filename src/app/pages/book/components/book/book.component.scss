@@ -1,19 +1,19 @@
+@use 'utilities/mixins';
+
 :host {
-	display: flex;
+	@include mixins.flex-column();
+
 	flex: 1;
-	flex-direction: column;
 
 	.assigner-field {
-		align-items: center;
-		display: flex;
-		gap: 10px;
+		@include mixins.flex-vertical-align(var(--margin-m));
 
 		.mat-mdc-form-field {
 			flex: 1;
 		}
 
 		&-input {
-			margin-top: 10px;
+			margin-top: var(--margin-m);
 		}
 	}
 }

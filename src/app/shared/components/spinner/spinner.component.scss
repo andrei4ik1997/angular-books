@@ -1,6 +1,5 @@
+@use 'utilities/mixins';
+
 :host {
-	align-items: center;
-	display: flex;
-	height: 100%;
-	justify-content: center;
+	@include mixins.flex-container();
 }

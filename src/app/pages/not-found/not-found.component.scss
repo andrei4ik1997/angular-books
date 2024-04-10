@@ -1,5 +1,7 @@
+@use 'utilities/mixins';
+
 :host {
-	display: flex;
+	@include mixins.flex-column();
+
 	flex: 1;
-	flex-direction: column;
 }

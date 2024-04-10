@@ -1,19 +1,17 @@
 @use '@angular/material' as mat;
 
 @use 'theme' as app-theme;
+@use 'utilities/mixins';
 
 :host {
 	.mat-toolbar-row {
-		display: flex;
-		justify-content: space-between;
+		@include mixins.flex-space-between();
 
 		.links {
-			display: flex;
-			gap: 12px;
+			@include mixins.flex-row(var(--margin-m));
 
 			&__link {
 				color: white;
-
 				text-decoration: none;
 
 				&:active,

@@ -1,0 +1,89 @@
+@mixin flex-row($gap: 0) {
+	display: flex;
+	flex-direction: row;
+	gap: $gap;
+}
+
+@mixin flex-centered($gap: 0) {
+	align-items: center;
+	display: flex;
+	gap: $gap;
+	justify-content: center;
+}
+
+@mixin flex-container($gap: 0) {
+	display: flex;
+	flex-direction: column;
+	gap: $gap;
+	height: 100%;
+	width: 100%;
+}
+
+@mixin flex-column($gap: 0) {
+	display: flex;
+	flex-direction: column;
+	gap: $gap;
+}
+
+@mixin flex-center-column($gap: 0) {
+	display: flex;
+	flex-direction: column;
+	gap: $gap;
+	justify-content: center;
+}
+
+@mixin flex-vertical-align($gap: 0) {
+	align-items: center;
+	display: flex;
+	gap: $gap;
+}
+
+@mixin flex-horizon-align($gap: 0) {
+	display: flex;
+	gap: $gap;
+	justify-content: center;
+}
+
+@mixin flex-wrap($gap: 0) {
+	display: flex;
+	flex-wrap: wrap;
+	gap: $gap;
+}
+
+@mixin flex-space-evenly($gap: 0) {
+	display: flex;
+	gap: $gap;
+	justify-content: space-evenly;
+}
+
+@mixin flex-space-around($gap: 0) {
+	display: flex;
+	gap: $gap;
+	justify-content: space-around;
+}
+
+@mixin flex-space-between($gap: 0) {
+	display: flex;
+	gap: $gap;
+	justify-content: space-between;
+}
+
+@mixin flex-end($gap: 0) {
+	display: flex;
+	gap: $gap;
+	justify-content: flex-end;
+}
+
+@mixin var-range($variable, $value) {
+	// Default
+	#{$variable}: $value;
+
+	// Smaller values
+	#{$variable}-m: calc(var(#{$variable}) / 1.6);
+	#{$variable}-s: calc(var(#{$variable}) / 2);
+	#{$variable}-xs: calc(var(#{$variable}) / 4);
+
+	// Bigger values
+	#{$variable}-l: calc(var(#{$variable}) * 2);
+	#{$variable}-xl: calc(var(#{$variable}) * 4);
+}

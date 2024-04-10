@@ -1,6 +1,7 @@
+@use 'utilities/mixins';
+
 :host {
-	display: flex;
-	justify-content: space-between;
+	@include mixins.flex-space-between();
 
 	.search {
 		width: 300px;

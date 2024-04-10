@@ -1,12 +1,12 @@
+@use 'utilities/mixins';
+
 :host {
 	height: 100%;
 
 	.no-data {
-		align-items: center;
-		display: flex;
+		@include mixins.flex-container();
+
 		font-weight: bold;
-		height: 100%;
-		justify-content: center;
 
 		&.xs {
 			font-size: 12px;

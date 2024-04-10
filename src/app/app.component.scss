@@ -1,24 +1,22 @@
+@use 'utilities/mixins';
+
 :host {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	width: 100%;
+	@include mixins.flex-container();
 
 	.main {
+		@include mixins.flex-column(var(--margin-xs));
+
 		box-sizing: border-box;
-		display: flex;
 		flex: 1;
-		flex-direction: column;
-		gap: 4px;
 		height: 0;
-		padding: 16px;
+		padding: var(--padding);
 
 		&::ng-deep {
 			not-found-container,
 			books-container {
-				display: flex;
+				@include mixins.flex-column(var(--margin-xs));
+
 				flex: 1;
-				flex-direction: column;
 				height: 0;
 			}
 		}

@@ -1,0 +1,11 @@
+@use 'utilities/mixins';
+
+:host {
+	@include mixins.flex-column();
+
+	.author {
+		@include mixins.flex-vertical-align(var(--margin-s));
+
+		height: 100px;
+	}
+}

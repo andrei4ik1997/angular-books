@@ -1,0 +1,16 @@
+<div class="author">
+	@if (isEditMode()) {
+		<mat-form-field>
+			<mat-label>Автор</mat-label>
+			<input matInput [formControl]="authorNameFormControl" />
+
+			@if (authorNameFormControl.getError('valueExist')) {
+				<mat-hint align="start">Автор уже добавлен</mat-hint>
+			}
+		</mat-form-field>
+		<mat-icon (click)="changeEditMode(false)">done</mat-icon>
+	} @else {
+		<span>{{ author().name }}</span>
+		<mat-icon (click)="changeEditMode(true)">edit</mat-icon>
+	}
+</div>

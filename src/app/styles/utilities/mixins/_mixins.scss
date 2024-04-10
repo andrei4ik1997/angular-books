@@ -75,15 +75,38 @@
 }
 
 @mixin var-range($variable, $value) {
-	// Default
-	#{$variable}: $value;
+	:root {
+		// Default
+		#{$variable}: $value;
 
-	// Smaller values
-	#{$variable}-m: calc(var(#{$variable}) / 1.6);
-	#{$variable}-s: calc(var(#{$variable}) / 2);
-	#{$variable}-xs: calc(var(#{$variable}) / 4);
+		// Smaller values
+		#{$variable}-m: calc(var(#{$variable}) / 1.6);
+		#{$variable}-s: calc(var(#{$variable}) / 2);
+		#{$variable}-xs: calc(var(#{$variable}) / 4);
 
-	// Bigger values
-	#{$variable}-l: calc(var(#{$variable}) * 2);
-	#{$variable}-xl: calc(var(#{$variable}) * 4);
+		// Bigger values
+		#{$variable}-l: calc(var(#{$variable}) * 2);
+		#{$variable}-xl: calc(var(#{$variable}) * 4);
+	}
+}
+
+@mixin scroll() {
+	& {
+		&::-webkit-scrollbar {
+			height: 5px;
+			width: 6px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: transparent;
+			border-radius: 10px;
+			opacity: 0.6;
+			width: 16px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: #aaa;
+			border-radius: 6px;
+		}
+	}
 }

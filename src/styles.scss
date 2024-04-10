@@ -1,8 +1,6 @@
 @use 'utilities/mixins';
 
-@use './app/styles/main.scss';
+@use './app/styles/main';
 
-app-root {
-	@include mixins.var-range(--padding, 16px);
-	@include mixins.var-range(--margin, 16px);
-}
+@include mixins.var-range(--padding, 16px);
+@include mixins.var-range(--margin, 16px);

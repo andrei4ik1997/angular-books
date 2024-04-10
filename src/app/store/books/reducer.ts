@@ -1,5 +1,5 @@
 import {Action, createReducer, on} from '@ngrx/store';
-import {Book, loadingStatus} from '@shared';
+import {loadingStatus} from '@shared';
 import {booksActions} from './actions';
 import {BooksState} from './entities/interfaces';
 
@@ -32,7 +32,7 @@ const reducer = createReducer(
 	})),
 	on(booksActions.addBook.succeeded, (state, payload) => ({
 		...state,
-		books: state.books.concat(payload.payload satisfies Book),
+		books: state.books.concat(payload.payload),
 	})),
 	on(booksActions.getBook.requested, (state) => ({
 		...state,

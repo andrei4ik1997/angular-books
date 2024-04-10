@@ -4,9 +4,10 @@ import {FormBuilder, ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialog} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
-import {AddNewBookModalData, Book, SORT_VALUES, Sort} from '@shared';
+import {AddNewBookModalData, Author, Book, SORT_VALUES, Sort} from '@shared';
 import {AddNewBookComponent} from '../add-new-book/add-new-book.component';
 
 @Component({
@@ -15,7 +16,7 @@ import {AddNewBookComponent} from '../add-new-book/add-new-book.component';
 	styleUrl: './action-panel.component.scss',
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	standalone: true,
-	imports: [MatButtonModule, MatFormFieldModule, MatSelectModule, ReactiveFormsModule, MatInputModule],
+	imports: [MatButtonModule, MatFormFieldModule, MatSelectModule, ReactiveFormsModule, MatInputModule, MatIconModule],
 })
 export class ActionPanelComponent implements OnInit {
 	private readonly formBuilder = inject(FormBuilder);
@@ -23,7 +24,7 @@ export class ActionPanelComponent implements OnInit {
 	private readonly destroyRef = inject(DestroyRef);
 
 	public readonly disabled = input<boolean | undefined>(false);
-	public readonly authors = input.required<string[]>();
+	public readonly authors = input.required<Author[]>();
 	public readonly genre = input.required<string[]>();
 	public readonly languages = input.required<string[]>();
 
@@ -50,7 +51,7 @@ export class ActionPanelComponent implements OnInit {
 		});
 	}
 
-	protected openAddNewbookDialog(): void {
+	protected openAddNewBookDialog(): void {
 		const modalData: AddNewBookModalData = {
 			authors: this.authors(),
 			genre: this.genre(),
@@ -68,5 +69,9 @@ export class ActionPanelComponent implements OnInit {
 				this.addNewBook.emit(result);
 			}
 		});
+	}
+
+	protected clearSearch(): void {
+		this.searchFormControl.reset();
 	}
 }

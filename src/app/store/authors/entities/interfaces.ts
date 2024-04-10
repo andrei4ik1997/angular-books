@@ -1,6 +1,6 @@
-import {LoadingStatus} from '@shared';
+import {Author, LoadingStatus} from '@shared';
 
 export interface AuthorsState {
-	authors: string[];
+	authors: Author[];
 	authorsLoadingStatus: LoadingStatus;
 }

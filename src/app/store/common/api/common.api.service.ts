@@ -7,13 +7,18 @@ import {Observable, map} from 'rxjs';
 export class CommonApiService {
 	private readonly httpClient = inject(HttpClient);
 
+	private readonly restLanguagesPath = 'languages';
+	private readonly restGenresPath = 'genres';
+
 	public getLanguages(): Observable<string[]> {
 		return this.httpClient
-			.get<string[]>(`${FIREBASE_API_URL}/languages.json`)
+			.get<string[]>(`${FIREBASE_API_URL}/${this.restLanguagesPath}.json`)
 			.pipe(map((languages) => languages ?? LANGUAGES));
 	}
 
 	public getGenres(): Observable<string[]> {
-		return this.httpClient.get<string[]>(`${FIREBASE_API_URL}/genres.json`).pipe(map((genres) => genres ?? GENRES));
+		return this.httpClient
+			.get<string[]>(`${FIREBASE_API_URL}/${this.restGenresPath}.json`)
+			.pipe(map((genres) => genres ?? GENRES));
 	}
 }

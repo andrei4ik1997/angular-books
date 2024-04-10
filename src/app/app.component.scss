@@ -13,7 +13,8 @@
 
 		&::ng-deep {
 			not-found-container,
-			books-container {
+			books-container,
+			authors-container {
 				@include mixins.flex-column(var(--margin-xs));
 
 				flex: 1;

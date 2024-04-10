@@ -33,7 +33,7 @@ export class BooksEffects {
 				ofType(booksActions.addBook.succeeded),
 				tap(() => {
 					ToastService.success({
-						message: 'New book has been successfully added',
+						message: 'Новая книга успешно добавлена',
 					});
 				})
 			),
@@ -48,7 +48,7 @@ export class BooksEffects {
 				ofType(booksActions.addBook.failed),
 				tap(() => {
 					ToastService.error({
-						message: 'New book has not been added',
+						message: 'Книга не добавлена',
 					});
 				})
 			),

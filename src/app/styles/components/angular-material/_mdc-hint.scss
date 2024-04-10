@@ -1,0 +1,9 @@
+@use '@angular/material' as mat;
+
+@use '../../theme' as app-theme;
+
+:root {
+	.mat-mdc-form-field-hint {
+		color: mat.get-theme-color(app-theme.$angular-app-theme, warn);
+	}
+}

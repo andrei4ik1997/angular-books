@@ -24,7 +24,24 @@ const reducer = createReducer(
 		...state,
 		authors: initialState.authors,
 		authorsLoadingStatus: loadingStatus.loaded,
-	}))
+	})),
+	on(authorsActions.addAuthor.succeeded, (state, payload) => ({
+		...state,
+		authors: state.authors.concat(payload.payload),
+	})),
+	on(authorsActions.editAuthor.succeeded, (state, payload) => {
+		const copyAuthors = state.authors.slice();
+		const modifiedAuthorIndex = copyAuthors.findIndex((author) => author.id === payload.payload.id);
+
+		if (modifiedAuthorIndex > -1) {
+			copyAuthors[modifiedAuthorIndex] = payload.payload;
+		}
+
+		return {
+			...state,
+			authors: copyAuthors,
+		};
+	})
 );
 
 export function authorsReducer(state: AuthorsState | undefined, action: Action): AuthorsState {

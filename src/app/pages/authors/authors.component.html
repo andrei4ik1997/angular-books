@@ -1,0 +1,26 @@
+<div class="actions">
+	<button
+		mat-flat-button
+		color="primary"
+		[disabled]="authorsLoadingStatus()?.loading"
+		(click)="openAddNewAuthorDialog()"
+	>
+		Добавить автора
+	</button>
+</div>
+
+<div class="authors">
+	@if (authorsLoadingStatus()?.loading) {
+		<spinner />
+	} @else {
+		@if (authors()?.length) {
+			@for (author of authors(); track author.id) {
+				<author class="author" [author]="author" [authors]="authors()" (editAuthor)="editAuthor.emit($event)" />
+			} @empty {
+				<no-data />
+			}
+		} @else {
+			<no-data />
+		}
+	}
+</div>

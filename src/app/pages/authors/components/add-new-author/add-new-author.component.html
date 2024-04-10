@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Добавление нового автора</h2>
+
+<mat-dialog-content>
+	<form class="form" [formGroup]="authorFormGroup">
+		<mat-form-field>
+			<mat-label>Автор</mat-label>
+			<input matInput formControlName="name" />
+
+			@if (authorFormGroup.controls.name.getError('valueExist')) {
+				<mat-hint align="start">Автор уже добавлен</mat-hint>
+			}
+		</mat-form-field>
+	</form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+	<button mat-button (click)="close()">Отменить</button>
+	<button mat-button mat-flat-button color="primary" [disabled]="authorFormGroup.invalid" (click)="add()">
+		Добавить
+	</button>
+</mat-dialog-actions>

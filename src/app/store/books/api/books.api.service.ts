@@ -7,17 +7,19 @@ import {Observable, map} from 'rxjs';
 export class BooksApiService {
 	private readonly httpClient = inject(HttpClient);
 
+	private readonly restPath = 'books';
+
 	public getBooks(): Observable<Book[]> {
 		return this.httpClient
-			.get<Record<string, Book>>(`${FIREBASE_API_URL}/books.json`)
+			.get<Record<string, Book>>(`${FIREBASE_API_URL}/${this.restPath}.json`)
 			.pipe(map((books) => Object.values(books) ?? []));
 	}
 
 	public addBook(payload: Book): Observable<Book> {
-		return this.httpClient.put<Book>(`${FIREBASE_API_URL}/books/${payload.id}.json`, payload);
+		return this.httpClient.put<Book>(`${FIREBASE_API_URL}/${this.restPath}/${payload.id}.json`, payload);
 	}
 
 	public getBook(bookId: number | null): Observable<Book> {
-		return this.httpClient.get<Book>(`${FIREBASE_API_URL}/books/${bookId}.json`);
+		return this.httpClient.get<Book>(`${FIREBASE_API_URL}/${this.restPath}/${bookId}.json`);
 	}
 }

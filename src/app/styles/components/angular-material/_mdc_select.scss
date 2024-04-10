@@ -1,0 +1,7 @@
+@use '../../utilities/mixins';
+
+:root {
+	.mat-mdc-select-panel {
+		@include mixins.scroll();
+	}
+}

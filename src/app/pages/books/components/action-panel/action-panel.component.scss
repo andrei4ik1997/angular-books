@@ -4,7 +4,15 @@
 	@include mixins.flex-space-between();
 
 	.search {
-		width: 300px;
+		@include mixins.flex-vertical-align(var(--margin-s));
+
+		.mat-mdc-form-field {
+			width: 300px;
+		}
+
+		.mat-icon {
+			cursor: pointer;
+		}
 	}
 
 	.sort {

@@ -1,0 +1,9 @@
+:host {
+	--mat-dialog-actions-alignment: flex-end;
+
+	.mat-mdc-dialog-content {
+		.mat-mdc-form-field {
+			width: 100%;
+		}
+	}
+}

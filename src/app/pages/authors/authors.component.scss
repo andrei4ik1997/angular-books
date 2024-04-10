@@ -1,0 +1,22 @@
+@use 'utilities/mixins';
+
+:host {
+	@include mixins.flex-column(var(--margin));
+
+	flex: 1;
+	height: 0;
+	padding: 0 var(--padding-m);
+
+	.authors {
+		@include mixins.flex-column(var(--margin-m));
+		@include mixins.scroll();
+
+		overflow: auto;
+
+		.author {
+			&:hover {
+				box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+			}
+		}
+	}
+}

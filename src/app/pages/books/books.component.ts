@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, inject, input, output} from '@angular/core';
 import {Router} from '@angular/router';
-import {Book, Filters, LoadingStatus, NoDataComponent, PageRoute, Sort, SpinnerComponent} from '@shared';
+import {Author, Book, Filters, LoadingStatus, NoDataComponent, PageRoute, Sort, SpinnerComponent} from '@shared';
 import {ActionPanelComponent} from './components/action-panel/action-panel.component';
 import {BookComponent} from './components/book/book.component';
 import {FiltersComponent} from './components/filters/filters.component';
@@ -22,7 +22,7 @@ export class BooksComponent {
 	public readonly booksLanguages = input.required<string[]>();
 	public readonly bookGenres = input.required<string[]>();
 	public readonly maxPages = input.required<number>();
-	public readonly authors = input.required<string[]>();
+	public readonly authors = input.required<Author[]>();
 	public readonly genre = input.required<string[]>();
 	public readonly languages = input.required<string[]>();
 

@@ -1,9 +1,14 @@
-<button mat-flat-button color="primary" [disabled]="disabled()" (click)="openAddNewbookDialog()">Добавить книгу</button>
+<button mat-flat-button color="primary" [disabled]="disabled()" (click)="openAddNewBookDialog()">Добавить книгу</button>
 
-<mat-form-field class="search">
-	<mat-label>Поиск по названию и описанию</mat-label>
-	<input matInput [formControl]="searchFormControl" />
-</mat-form-field>
+<div class="search">
+	<mat-form-field>
+		<mat-label>Поиск по названию и описанию</mat-label>
+		<input matInput [formControl]="searchFormControl" />
+	</mat-form-field>
+	@if (searchFormControl.value) {
+		<mat-icon (click)="clearSearch()">clear</mat-icon>
+	}
+</div>
 
 <mat-form-field class="sort">
 	<mat-label>Сортировка по</mat-label>

@@ -1,3 +1,5 @@
+import {Author} from './authors.interfaces';
+
 export interface Book {
 	author: string;
 	description: string;
@@ -9,7 +11,7 @@ export interface Book {
 }
 
 export interface AddNewBookModalData {
-	authors: string[];
+	authors: Author[];
 	genre: string[];
 	languages: string[];
 }

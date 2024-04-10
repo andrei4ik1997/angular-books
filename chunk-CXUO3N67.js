@@ -1,0 +1,1 @@
+import{d as t,sa as p,ta as r,va as o}from"./chunk-BRQE4MZL.js";var A={getAuthors:p(o.toUpperCase(),"Get authors",t()),addAuthor:r(o.toUpperCase(),"Add author",t(),t()),editAuthor:r(o.toUpperCase(),"Edit author",t(),t())};export{A as a};

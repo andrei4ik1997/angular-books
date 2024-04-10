@@ -12,7 +12,6 @@ module.exports = {
 			'rules',
 		],
 		'order/properties-order': null,
-		'order/properties-alphabetical-order': true,
 		'max-nesting-depth': 15,
 		'selector-max-compound-selectors': 15,
 		'selector-class-pattern': null,

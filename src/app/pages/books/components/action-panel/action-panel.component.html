@@ -12,7 +12,7 @@
 
 <mat-form-field class="sort">
 	<mat-label>Сортировка по</mat-label>
-	<mat-select name="sort" [formControl]="sortFormControl">
+	<mat-select [formControl]="sortFormControl">
 		<mat-option [value]="null">-</mat-option>
 
 		@for (sort of sortValues; track sort.field) {

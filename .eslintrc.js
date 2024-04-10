@@ -47,6 +47,7 @@ module.exports = {
 						allow: ['warn', 'error'],
 					},
 				],
+				'@angular-eslint/prefer-control-flow': ['error'],
 				'@angular-eslint/prefer-standalone-component': ['error'],
 				'@angular-eslint/component-selector': 'off',
 				'@angular-eslint/directive-class-suffix': 'off',

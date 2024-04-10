@@ -9,7 +9,7 @@
 
 		<mat-form-field>
 			<mat-label>Автор</mat-label>
-			<mat-select formControlName="author" name="author">
+			<mat-select formControlName="author">
 				@for (author of matDialogData.authors; track author.id) {
 					<mat-option [value]="author.name">{{ author.name }}</mat-option>
 				}
